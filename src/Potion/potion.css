@@ -1,0 +1,84 @@
+.Enigme{
+    display:flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.potion{
+    display:flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.Potion-image{
+    width:5em;
+    height:5em;
+}
+
+.Enigme h2{
+    display:flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    font-family: Impact, Charcoal, sans-serif;
+    letter-spacing: 2px;
+    word-spacing: 2px;
+    font-weight: 400;
+    text-decoration: none;
+    font-style: normal;
+    font-variant: normal;
+    text-transform: none;
+    padding: 2em 2em;
+}
+
+.Enigme-svg{
+    width:20em;
+    heigth:10em;
+}
+
+.Enonce{
+
+}
+
+.Potion-button:hover{
+    border-radius: 30px;
+
+    box-shadow:  -21px -21px 32px rgba(29, 32, 38, 0),
+    21px 21px 32px #333842;
+}
+
+.Clicker{
+    display:flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.Clicker h1{
+    font-family: Impact, Charcoal, sans-serif;
+    letter-spacing: 2px;
+    word-spacing: 2px;
+    font-weight: 400;
+    text-decoration: none;
+    font-style: normal;
+    font-variant: normal;
+    text-transform: none;
+    padding: 2em 2em;
+}
+
+.Clicker img{
+    height: 10em;
+}
+
+.Solution{
+    display:flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
