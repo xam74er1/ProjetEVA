@@ -1,7 +1,7 @@
 import "./potion.css"
 import {useState} from "react";
 
-function Potion(){
+function Potion(passFct){
 
     const [display, setDisplay] = useState(true);
     const [displaySolution, setDisplaySolution] = useState(false);
@@ -126,7 +126,9 @@ function Potion(){
                     <div className={"Solution"}>
                         <h1> Bravos tu a trouve la bonne potion !! </h1>
                         <p>Le code est 123 </p>
-
+                        <button className="btn" onClick={
+                            ()=>  passFct.passData("portal")
+                        }>start</button>
                     </div>
                 )}
             </div>

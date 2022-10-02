@@ -37,3 +37,7 @@ border: solid 2px #00cc22;
     justify-content: center;
     text-align: center;
 }
+
+.code p,.input-name{
+    padding-top: 1em;
+}

@@ -5,13 +5,24 @@ import Main from "./Main/Main";
 import {Timer} from "./Header/Header";
 import {useState} from "react";
 import Potion from "./Potion/Potion";
+import Page404 from "./404/404";
+import PageTetris from "./tetris/pageTertis";
 
 function App() {
 
     const [data, setData] = useState('start');
 
     function passData  (childdata) {
-        setData(childdata);
+
+        let allCode = ["Potion","tetris","start"]
+
+        if(!allCode.includes(childdata)){
+            setData("404")
+        }else{
+            setData(childdata);
+        }
+
+
     }
 
 
@@ -27,9 +38,21 @@ function App() {
                 )
                 }
                 {data === "Potion"&&(
-                <Potion></Potion>
+                    <Potion passData={passData}></Potion>
                 )
                 }
+
+                {data=="tetris"&&(
+                    <PageTetris passData={passData}/>
+                )
+
+                }
+
+                {data === "404"&&(
+                    <Page404 passData={passData}></Page404>
+                )
+                }
+
 
             </div>
 
