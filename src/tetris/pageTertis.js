@@ -29,7 +29,7 @@ function PageTetris(passData){
 	// game constants
 	//-------------------------------------------------------------------------
 
-	var GOAL = 22;
+	var GOAL = 100;
 
 	var KEY     = { ESC: 27, SPACE: 32, LEFT: 37, UP: 38, RIGHT: 39, DOWN: 40 }
 	var	DIR     = { UP: 0, RIGHT: 1, DOWN: 2, LEFT: 3, MIN: 0, MAX: 3 }
