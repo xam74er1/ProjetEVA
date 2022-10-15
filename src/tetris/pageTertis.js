@@ -29,7 +29,7 @@ function PageTetris(passData){
 	// game constants
 	//-------------------------------------------------------------------------
 
-	var GOAL = 100;
+	var GOAL = 1;
 
 	var KEY     = { ESC: 27, SPACE: 32, LEFT: 37, UP: 38, RIGHT: 39, DOWN: 40 }
 	var	DIR     = { UP: 0, RIGHT: 1, DOWN: 2, LEFT: 3, MIN: 0, MAX: 3 }
@@ -438,6 +438,17 @@ function PageTetris(passData){
 
 <div className="body">
 	<h1> Tu dois atteindre le score de {GOAL} ligne pour passe a l'etape suivante </h1>
+
+		{displaySolution&&(
+		<div id="solution">
+			<p> Helas tu na pas ete assez rapide ! il vas faloire passe encore une autre epreuve !   </p>
+			<br/>
+			   <button className="btn" onClick={
+                ()=>  passData.passData("path")
+            }>Continuer</button>
+		</div>
+	)}
+
 		<div id="tetris">
 			<div id="menu">
 				<p id="start"><a onClick={()=>play()}>Apuie sur Espace pour commence , ou clicque ici</a></p>
@@ -449,14 +460,7 @@ function PageTetris(passData){
 				Sorry, this example cannot be run because your browser does not support the &lt;canvas&gt; element
 			</canvas>
 		</div>
-	{displaySolution&&(
-		<div id="solution">
-			<p> Bravos tu a reussi ! le code est 476 </p>
-			   <button className="btn" onClick={
-                ()=>  passData.passData("start")
-            }>Continuer</button>
-		</div>
-	)}
+
 </div>
 	)
 }

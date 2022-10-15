@@ -127,7 +127,7 @@ function Potion(passFct){
                         <h1> Bravos tu a trouve la bonne potion !! </h1>
                         <p>Le code est 123 </p>
                         <button className="btn" onClick={
-                            ()=>  passFct.passData("portal")
+                            ()=>  passFct.passData("start")
                         }>start</button>
                     </div>
                 )}

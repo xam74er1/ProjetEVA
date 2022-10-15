@@ -7,6 +7,7 @@ import {useState} from "react";
 import Potion from "./Potion/Potion";
 import Page404 from "./404/404";
 import PageTetris from "./tetris/pageTertis";
+import Path from "./path/path";
 
 function App() {
 
@@ -14,7 +15,7 @@ function App() {
 
     function passData  (childdata) {
 
-        let allCode = ["Potion","tetris","start"]
+        let allCode = ["Potion","tetris","start","path"]
 
         if(!allCode.includes(childdata)){
             setData("404")
@@ -52,7 +53,11 @@ function App() {
                     <Page404 passData={passData}></Page404>
                 )
                 }
-
+                {
+                    data==="path"&&(
+                        <Path passData={passData}/>
+                    )
+                }
 
             </div>
 
