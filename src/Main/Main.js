@@ -5,16 +5,18 @@ function Main(passFct) {
     function validateCode(){
 
         let text = document.getElementById("code").value;
-            passFct.passData(text)
+        passFct.passData(text)
 
     }
 
     return (
         <div className="Main">
             <div className="text">
-                Ce site te permtra de resoudre diversse enigmet ,
-                il vas te demende de resoudre diffrenet problmet , parfois tu aurais besoin d'une code qui ce trouve dans la boite .
-                Et parfois ce site te permtra davence en te donnanst la suite des enigume de la boite
+                Ce site te permettra de résoudre diverses énigmes ,
+                il va te demander de résoudre différent problème ,
+                parfois tu auras besoin d'un code qui se trouve dans la boite .
+                Et parfois ce site te permettra d'avancer en te donnant la suite des énigmes de la boite
+                Utilise un code donne dans une des boite
             </div>
 
 

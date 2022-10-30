@@ -49,11 +49,11 @@ return (
                 <h1 class="tracking-in-expand-fwd-top">
 
                     <div className="word">
-                        <span className="space">Bienvenus </span>
+                        <span className="space">Bienvenue </span>
                         <span className="space">dans</span>
                         <span>l'eni</span>
                         <span className="space">gme</span>
-                        <span>EVA</span>
+                        <span>E.V.A</span>
                         <span></span>
                     </div>
 

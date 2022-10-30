@@ -215,7 +215,6 @@ function PageTetris(passData){
 		if(rows>GOAL){
 			setDisplaySolution(true)
 		}
-
 		show('start');
 		setVisualScore();
 		playing = false;
@@ -438,6 +437,20 @@ function PageTetris(passData){
 
 <div className="body">
 	<h1> Tu dois atteindre le score de {GOAL} ligne pour passe a l'etape suivante </h1>
+
+	<div className="Consigne">
+		<ul>
+			<li>
+				Pour commence apuie sur la bare d'espace
+			</li>
+			<li>
+				Uttilise les fleche de direction pour tourne les brique
+			</li>
+			<li>
+				La solution de l'eniqugme te sera donne <strong>A LA FIN LORSQUE LA PARTIE SERA TERMINE </strong>
+			</li>
+		</ul>
+	</div>
 
 		{displaySolution&&(
 		<div id="solution">
