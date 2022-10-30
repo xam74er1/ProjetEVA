@@ -8,6 +8,7 @@ import Potion from "./Potion/Potion";
 import Page404 from "./404/404";
 import PageTetris from "./tetris/pageTertis";
 import Path from "./path/path";
+import Quatre from "./quatre/quatre";
 
 function App() {
 
@@ -15,7 +16,7 @@ function App() {
 
     function passData  (childdata) {
 
-        let allCode = ["Potion","tetris","start","path"]
+        let allCode = ["Potion","tetris","start","path","équilatéral"]
 
         if(!allCode.includes(childdata)){
             setData("404")
@@ -52,10 +53,17 @@ function App() {
                 {data === "404"&&(
                     <Page404 passData={passData}></Page404>
                 )
+
                 }
                 {
                     data==="path"&&(
                         <Path passData={passData}/>
+                    )
+                }
+
+                    {
+                    data==="équilatéral"&&(
+                        <Quatre passData={passData}/>
                     )
                 }
 

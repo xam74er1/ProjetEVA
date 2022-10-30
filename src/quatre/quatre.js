@@ -1,32 +1,32 @@
-import './Main.css';
+import '../Main/Main.css';
+import './quatre.css'
+import {useState} from "react";
 
-function Main(passFct) {
-
+function Quatre(passFct) {
+    const [solution, setSolution] = useState(false);
     function validateCode(){
 
         let text = document.getElementById("code").value;
-            passFct.passData(text)
+        if(text=="4"){
+            setSolution(true);
 
+        }else{
+            alert("Code incorrect")
+        }
+    }
+
+    function backStart(){
+        passFct.passData("start")
     }
 
     return (
         <div className="Main">
-            <div className="text">
-                Ce site te permtra de resoudre diversse enigmet ,
-                il vas te demende de resoudre diffrenet problmet , parfois tu aurais besoin d'une code qui ce trouve dans la boite .
-                Et parfois ce site te permtra davence en te donnanst la suite des enigume de la boite
-            </div>
-
-
-
-
 
             <div className={"code"}>
 
-                <p> Uttilise un code donne dans une des boite </p>
+                <p> Entre le nombre corespondant </p>
 
                 <div className={"input-name"}>
-
 
                     <label htmlFor="search"
                            className="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-gray-300">Your
@@ -39,7 +39,7 @@ function Main(passFct) {
                                       d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
                             </svg>
                         </div>
-                        <input type="search" id="code"
+                        <input type="number" id="code"
                                className="block p-4 pl-10 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                                placeholder="Entre le code" required></input>
                         <button type="submit"
@@ -52,10 +52,22 @@ function Main(passFct) {
 
                 </div>
             </div>
+            {solution&&(
+                <div className={"solution"}>
+                    <p> Bravos tu a trouves !</p>
+                    <p> Le code est 982 </p>
 
+                    <button type="submit"
+                            className="text-white right-2.5 bottom-2.5 bg-blue-700 hover:bg-green-500 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-green-500 dark:hover:bg-green-500 dark:focus:ring-green-800"
+                            onClick={()=>backStart()}>Retour a la page principal
+                    </button>
+                </div>
+            )
+
+            }
         </div>
 
     );
 }
 
-export default Main;
+export default Quatre;
