@@ -5,7 +5,7 @@ import "./tetris.css"
 
 //Source : https://github.com/jakesgordon/javascript-tetris go look
 function PageTetris(passData){
-   const [displaySolution, setDisplaySolution] = useState(false);
+	const [displaySolution, setDisplaySolution] = useState(false);
 	function get(id)        { return document.getElementById(id);  }
 	function hide(id)       { get(id).style.visibility = 'hidden'; }
 	function show(id)       { get(id).style.visibility = null;     }
@@ -212,7 +212,7 @@ function PageTetris(passData){
 	function play() { hide('start'); reset();          playing = true;  }
 	function lose() {
 
-		if(rows>GOAL){
+		if(rows>=GOAL){
 			setDisplaySolution(true)
 		}
 		show('start');
@@ -435,46 +435,49 @@ function PageTetris(passData){
 	return(
 
 
-<div className="body">
-	<h1> Tu dois atteindre le score de {GOAL} ligne pour passe a l'etape suivante </h1>
+		<div className="body">
+			<h1> Tu dois atteindre le score de {GOAL} ligne pour passe a l'etape suivante </h1>
+			{!displaySolution&&(
+				<div className="Consigne">
+					<ul>
+						<li>
+							Pour commence apuie sur la bare d'espace
+						</li>
+						<li>
+							Uttilise les fleche de direction pour tourne les brique
+						</li>
+						<li>
+							La solution de l'eniqugme te sera donne <strong>A LA FIN LORSQUE LA PARTIE SERA TERMINE </strong>
+						</li>
+					</ul>
+				</div>
+			)}
 
-	<div className="Consigne">
-		<ul>
-			<li>
-				Pour commence apuie sur la bare d'espace
-			</li>
-			<li>
-				Uttilise les fleche de direction pour tourne les brique
-			</li>
-			<li>
-				La solution de l'eniqugme te sera donne <strong>A LA FIN LORSQUE LA PARTIE SERA TERMINE </strong>
-			</li>
-		</ul>
-	</div>
+			{displaySolution&&(
+				<div id="solution">
+					<p> Helas tu na pas ete assez rapide ! il vas faloire passe encore une autre epreuve !   </p>
+					<br/>
+					<button className="btn" onClick={
+						()=>  passData.passData("path")
+					}>Continuer</button>
+				</div>
+			)}
 
-		{displaySolution&&(
-		<div id="solution">
-			<p> Helas tu na pas ete assez rapide ! il vas faloire passe encore une autre epreuve !   </p>
-			<br/>
-			   <button className="btn" onClick={
-                ()=>  passData.passData("path")
-            }>Continuer</button>
+			{!displaySolution&&(
+				<div id="tetris">
+					<div id="menu">
+						<p id="start"><a onClick={()=>play()}>Apuie sur Espace pour commence , ou clicque ici</a></p>
+						<p><canvas id="upcoming"></canvas></p>
+						<p>score <span id="score">00000</span></p>
+						<p>Ligne <span id="rows">0</span></p>
+					</div>
+					<canvas id="canvas">
+						Sorry, this example cannot be run because your browser does not support the &lt;canvas&gt; element
+					</canvas>
+				</div>
+			)}
 		</div>
-	)}
 
-		<div id="tetris">
-			<div id="menu">
-				<p id="start"><a onClick={()=>play()}>Apuie sur Espace pour commence , ou clicque ici</a></p>
-				<p><canvas id="upcoming"></canvas></p>
-				<p>score <span id="score">00000</span></p>
-				<p>Ligne <span id="rows">0</span></p>
-			</div>
-			<canvas id="canvas">
-				Sorry, this example cannot be run because your browser does not support the &lt;canvas&gt; element
-			</canvas>
-		</div>
-
-</div>
 	)
 }
 

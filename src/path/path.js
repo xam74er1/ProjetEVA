@@ -71,7 +71,7 @@ function Path(passFct) {
 
             {win&&(
                 <div className={"fullSize scale-in-center"}>
-                    <p> Bravos tu a trouve<br/> le code est 123 </p>
+                    <p> Bravos tu a trouve<br/> le code est 538 </p>
                     <button className="btn" onClick={
                         ()=>  passFct.passData("start")
                     }>Continuer</button>
@@ -87,8 +87,8 @@ function Path(passFct) {
                     <div className="path3 ok"></div>
                     <div className="path4 ok"></div>
                     <div className="yellowbg ok start"></div>
-                    <div className="yellowbg2 ok"></div>
-                    <div className="yellowbg3 ok"></div>
+                    <div className="yellowbg2 ok start"></div>
+                    <div className="yellowbg3 ok start"></div>
                     <div className="bleubg ok"></div>
                     <div className="bleubg1 ok"></div>
                     <div className="bleubg2 ok"></div>
