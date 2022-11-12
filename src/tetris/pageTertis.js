@@ -436,18 +436,18 @@ function PageTetris(passData){
 
 
 		<div className="body">
-			<h1> Tu dois atteindre le score de {GOAL} ligne pour passe a l'etape suivante </h1>
+			<h1> Tu dois atteindre le score de {GOAL} lignes pour passer a l'etape suivante </h1>
 			{!displaySolution&&(
 				<div className="Consigne">
 					<ul>
 						<li>
-							Pour commence apuie sur la bare d'espace
+							Pour commencer apuie sur la barre d'espace
 						</li>
 						<li>
-							Uttilise les fleche de direction pour tourne les brique
+							Utilise les fleches de direction pour tourner les briques
 						</li>
 						<li>
-							La solution de l'eniqugme te sera donne <strong>A LA FIN LORSQUE LA PARTIE SERA TERMINE </strong>
+							La solution de l'énigume te sera donne <strong>A LA FIN LORSQUE LA PARTIE SERA TERMINEE </strong>
 						</li>
 					</ul>
 				</div>
@@ -466,7 +466,7 @@ function PageTetris(passData){
 			{!displaySolution&&(
 				<div id="tetris">
 					<div id="menu">
-						<p id="start"><a onClick={()=>play()}>Apuie sur Espace pour commence , ou clicque ici</a></p>
+						<p id="start"><a onClick={()=>play()}>Appuie sur Espace pour commence , ou clique ici</a></p>
 						<p><canvas id="upcoming"></canvas></p>
 						<p>score <span id="score">00000</span></p>
 						<p>Ligne <span id="rows">0</span></p>

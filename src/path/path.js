@@ -66,12 +66,12 @@ function Path(passFct) {
 
     return (
         <div>
-            <p>Pour revenir ici tu peux uttilise le code "path" </p>
-            Tu dois suivre le chemain avec ta souris jusca la ligne d'arrive , mais sans depasse bonne chance !!
+            <p>Pour revenir ici tu peux utiliser le code "path" </p>
+            Tu dois suivre le chemin avec ta souris jusqu'à la ligne d'arrivé , mais sans depasser bonne chance !!
 
             {win&&(
                 <div className={"fullSize scale-in-center"}>
-                    <p> Bravos tu a trouve<br/> le code est 538 </p>
+                    <p> Bravo tu as trouve<br/> le code est 538 </p>
                     <button className="btn" onClick={
                         ()=>  passFct.passData("start")
                     }>Continuer</button>
@@ -111,7 +111,7 @@ function Path(passFct) {
             )}
             {display && (
                 <div className={"fullSize scale-in-center"}>
-                    <h1> Tu a depasser !!! </h1>
+                    <h1> Tu as depasse !!! </h1>
                     {genereateImage()}
                     <div className={"btnBox"}>
                         <button onClick={() => hide()} className={"btn"}>Retenter</button>

@@ -54,7 +54,7 @@ function Quatre(passFct) {
             </div>
             {solution&&(
                 <div className={"solution"}>
-                    <p> Bravos tu a trouves !</p>
+                    <p> Bravo tu as trouve !</p>
                     <p> Le code est 982 </p>
 
                     <button type="submit"

@@ -150,12 +150,56 @@ function End(passFct) {
   var birthday = null;
   var ctx = null
   var canvas = null;
+
+  var credis = [
+    {
+      name:"Max",
+      text:"En principe sa marche"
+    },{
+      name:"Artur",
+      text:"Je suis un artur"
+    }
+    ,{
+      name:"Constance",
+      text:"Cest de sa faute"
+    },
+    {
+      name:"Cyrielle",
+      text:"Je ne sais pas quoi mettre"
+    },
+    {
+      name:"Nicolas",
+      text:"Oui"
+    },
+    {
+      name:"Maxence",
+      text:"J'avais une super idee de serrure"
+    },
+    {
+      name:"Mathis",
+      text:"Vive la Rekpublik de douvaine ! "
+    }
+  ]
+
+  function compare( a, b ) {
+    if ( a.name < b.name ){
+      return -1;
+    }
+    if ( a.name > b.name ){
+      return 1;
+    }
+    return 0;
+  }
+
+
+
   function onLoad() {
     import("./end.css")
     canvas = document.getElementById('birthday')
     ctx = canvas.getContext('2d')
     birthday = new Birthday
     then = timestamp()
+
 
 
     window.onresize = () => birthday.resize()
@@ -177,13 +221,37 @@ function End(passFct) {
     })()
   }
 
+  function makeCredits(){
+    credis.sort( compare );
+    let allCredit = []
+    for(let i =0;i<credis.length;i++){
+      allCredit.push(
+          <div className={"credis"}>
+            <div className={"textCredit"}>{credis[i].text}</div>
+            <div className={"name"}>- {credis[i].name} -</div>
+            <hr className="my-4 mx-auto w-48 h-1 bg-gray-100 rounded border-0 md:my-10 dark:bg-gray-700"></hr>
+          </div>
+
+      )
+    }
+
+    return <div className={"allCredit"}>
+      {allCredit}
+    </div>
+  }
+
   return (
       <div className="end">
+        <div className={"movie"}>
         <div className={"text"}>
-          <h1>Happy Birthday</h1>
+
+            <h1>Happy Birthday</h1>
+            {makeCredits()}
+          </div>
         </div>
 
         <canvas id="birthday"></canvas>
+
 
       </div>
 

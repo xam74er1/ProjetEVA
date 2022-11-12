@@ -17,8 +17,8 @@ function App() {
     const [data, setData] = useState('start');
 
     function passData  (childdata) {
-
-        let allCode = ["Potion","tetris","start","path","équilatéral","charade","end"]
+        childdata = childdata.toLowerCase()
+        let allCode = ["potion","tetris","start","path","équilatéral","charade","end"]
 
         if(!allCode.includes(childdata)){
             setData("404")

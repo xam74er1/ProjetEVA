@@ -41,7 +41,7 @@ function Potion(passFct){
     function enoncer(){
         return (
             <div>
-                <h2> Pour avancer tu devra cliquer sur la bonne potion qui te ferra passe a l'enigme . </h2>,
+                <h2> Pour avancer tu devra cliquer sur la bonne potion qui te ferra passer à l'enigme . </h2>,
                 {returnButton()}
                 <div className={"Enoncer"}>
 
@@ -74,11 +74,11 @@ function Potion(passFct){
         return(
             <div class={"Clicker"}>
                 <h1> Mauvaise Potion ! </h1>
-                <p> Pour retente il vas faloire manger des cookie ! </p>
+                <p> Pour retentes il vas falloire manger des cookies ! </p>
 
                 <button className={"clicker-button"} onClick={()=>clickCookier()}>
                     <img src={"cookie.png"}/>
-                    Clique pour manger encore {MAX_CLCK-count} cookie !
+                    Clique pour manger encore {MAX_CLCK-count} cookies !
                 </button>
             </div>
         )
@@ -110,9 +110,9 @@ function Potion(passFct){
                             </path>
                         </pattern>
                     </defs>
-                    <text text-anchor="middle" x="50" y="15" font-size="17" fill="red" fill-opacity="0.1">LES POTION
+                    <text text-anchor="middle" x="50" y="15" font-size="17" fill="red" fill-opacity="0.1">LES POTIONS
                     </text>
-                    <text text-anchor="middle" x="50" y="15" font-size="17" fill="url(#wave)" fill-opacity="1">LES POTION
+                    <text text-anchor="middle" x="50" y="15" font-size="17" fill="url(#wave)" fill-opacity="1">LES POTIONS
                     </text>
                 </svg>
                 {display && !displaySolution &&(
@@ -124,7 +124,7 @@ function Potion(passFct){
 
                 {displaySolution &&(
                     <div className={"Solution"}>
-                        <h1> Bravos tu a trouve la bonne potion !! </h1>
+                        <h1> Bravo tu as trouve la bonne potion !! </h1>
                         <p>Le code est 123 </p>
                         <button className="btn" onClick={
                             ()=>  passFct.passData("start")

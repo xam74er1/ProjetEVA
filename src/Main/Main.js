@@ -13,10 +13,9 @@ function Main(passFct) {
         <div className="Main">
             <div className="text">
                 Ce site te permettra de résoudre diverses énigmes ,
-                il va te demander de résoudre différent problème ,
+                il va te demander de résoudre différents problèmes ,
                 parfois tu auras besoin d'un code qui se trouve dans la boite .
                 Et parfois ce site te permettra d'avancer en te donnant la suite des énigmes de la boite
-                Utilise un code donne dans une des boite
             </div>
 
 
@@ -25,7 +24,7 @@ function Main(passFct) {
 
             <div className={"code"}>
 
-                <p> Uttilise un code donne dans une des boite </p>
+                <p> Uttilise un code donne dans une des boites </p>
 
                 <div className={"input-name"}>
 

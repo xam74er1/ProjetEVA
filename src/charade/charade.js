@@ -19,12 +19,12 @@ function Charade(passFct) {
             <div className="text text-left">
                 A toi de trouve la solution a cette charade :
                 <ul className={"charade list-disc text-left"}>
-                    <li> Mon premier est la 2eme personnes du singulier du verbe être </li>
+                    <li> Mon premier est la 2eme personne du singulier du verbe être </li>
                     <li> Mon deuxième est la 11eme lettre de l'alphabet </li>
                     <li> Mon troisième est la 6eme note de musique </li>
-                    <li> Mon tout est un après le un </li>
-
-                </ul>
+                    <li> Mon quatrième est après le un </li>
+                    <li>Mon tout est la réponse à entrer bien orthographié</li>
+            </ul>
             </div>
 
 
