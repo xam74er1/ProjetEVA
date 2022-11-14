@@ -156,8 +156,8 @@ function End(passFct) {
       name:"Max",
       text:"En principe sa marche"
     },{
-      name:" artHurE",
-      text:"46° 11' 35.711\" N 6° 14' 2.969\" E ?"
+      name:" artHur",
+      text:"Mais elle était pas censée mourir avant ?"
     }
     ,{
       name:"Constance",
