@@ -156,16 +156,16 @@ function End(passFct) {
       name:"Max",
       text:"En principe sa marche"
     },{
-      name:"Artur",
-      text:"Je suis un artur"
+      name:" artHurE",
+      text:"46° 11' 35.711\" N 6° 14' 2.969\" E ?"
     }
     ,{
       name:"Constance",
-      text:"Cest de sa faute"
+      text:"Félicitations Eva, en réussissant toutes ces énigmes, tu as prouvé que tu étais prête a passer a ta 23éme année. Joyeux anniversaire !! "
     },
     {
       name:"Cyrielle",
-      text:"Je ne sais pas quoi mettre"
+      text:"Après autant d'énigme résolu tu peux maintenant et officiellement ajouter 1 bougie pour atteindre 23 ans  et fêter ton anniversaire"
     },
     {
       name:"Nicolas",
@@ -177,7 +177,7 @@ function End(passFct) {
     },
     {
       name:"Mathis",
-      text:"Vive la Rekpublik de douvaine ! "
+      text:"GUTen Tag mein führerin 🤚 , Vive la Rekpublik de douvaine ! "
     }
   ]
 
