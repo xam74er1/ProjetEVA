@@ -41,7 +41,7 @@ function App() {
                     <Main passData={passData}/>
                 )
                 }
-                {data === "Potion"&&(
+                {data === "potion"&&(
                     <Potion passData={passData}></Potion>
                 )
                 }
